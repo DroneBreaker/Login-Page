@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Button from "./Button";
-import Register from "./Register";
 
-const Login = ({ loginIntro, onFormSwitch }) => {
+const Register = ({ onFormSwitch }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,17 +19,15 @@ const Login = ({ loginIntro, onFormSwitch }) => {
             Welcome here
           </h1>
 
-          <h2 className="font-semibold text-xl mx-10 md:mx-20">Please Login</h2>
-
-          <p className="mx-10 md:mx-20 text-xs mt-2 text-gray-600 mb-6">
-            {loginIntro}
-          </p>
+          <h2 className="font-semibold text-xl mx-10 md:mx-20 mb-3">
+            Please Register
+          </h2>
 
           <Button
             bgColor={"white"}
             img={"#"}
             location="mail.google.com"
-            title={"Sign in with Google"}
+            title={"Sign up with Google"}
           />
 
           <hr className="mt-5 mx-10 md:mx-20" />
@@ -39,6 +36,16 @@ const Login = ({ loginIntro, onFormSwitch }) => {
             onSubmit={handleSubmit}
             className="mt-6 mx-10 md:mx-20 justify-items-center"
           >
+            <label htmlFor="fullname" className="block">
+              Full Name*
+            </label>
+            <input
+              className="rounded-full text-sm w-60 md:w-64 px-4 p-2 text-gray-500"
+              placeholder="Richard Browne"
+              onChange={(e) => setName(e.target.value)}
+              value={email}
+            />
+
             <label htmlFor="email" className="block">
               Email*
             </label>
@@ -74,22 +81,22 @@ const Login = ({ loginIntro, onFormSwitch }) => {
             </button>
           </div>
 
-          <Button bgColor={"blue"} title="Login" />
+          <Button bgColor={"blue"} location={"/"} title="Register" />
 
           <div className="mt-4">
             <p className="mx-10 md:mx-20 text-xs font-semibold">
-              Not registered yet?{" "}
+              Already have an account?{" "}
               <button
-                onClick={() => onFormSwitch("register")}
+                onClick={() => onFormSwitch("login")}
                 className="text-violet-500 text-xs font-semibold"
               >
-                Create an Account
+                Login
               </button>
             </p>
           </div>
         </div>
 
-        <div className="bg-gradient-to-l from-red-500 to-blue-700">
+        <div className="bg-blue-600">
           <div className="h-64 w-64 rounded-full bg-gray-500 mx-6 md:mx-24 mt-6 mb-2 md:mt-24 animate-spin"></div>
         </div>
       </div>
@@ -97,4 +104,4 @@ const Login = ({ loginIntro, onFormSwitch }) => {
   );
 };
 
-export default Login;
+export default Register;
