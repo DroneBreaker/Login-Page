@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Button = ({ bgColor, img, title, onFormSwitch }) => {
   return (
     <button
-      onClick={() => onFormSwitch("register")}
       type="submit"
       style={{
         background: bgColor,
@@ -21,7 +20,7 @@ const Button = ({ bgColor, img, title, onFormSwitch }) => {
             ? "60px"
             : "100px",
       }}
-      className="flex mx-10 md:mx-20 p-2 w-60 md:w-64 rounded-full text-xs text-white"
+      className="flex p-2 w-60 md:w-64 rounded-full text-xs text-white"
     >
       <img src={img} />
       <p className="mx-2">{title}</p>
