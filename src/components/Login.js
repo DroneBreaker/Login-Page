@@ -63,15 +63,6 @@ const Login = ({ loginIntro, onFormSwitch }) => {
             {loginIntro}
           </p>
 
-          <div className="mx-10 md:mx-20">
-            <Button
-              bgColor={"white"}
-              img={"#"}
-              // location="mail.google.com"
-              title={"Sign in with Google"}
-            />
-          </div>
-
           <hr className="mt-5 mx-10 md:mx-20" />
 
           <form
@@ -127,20 +118,22 @@ const Login = ({ loginIntro, onFormSwitch }) => {
               style={{ left: "20%" }}
               className="bg-white h-10 w-10 rounded-full relative"
             >
-              <img src="#" />
+              <img src="/google.png" />
             </div>
 
             <div
               style={{ left: "90%", top: "20%" }}
-              className="bg-white h-10 w-10 rounded-full relative animate-spin"
+              className="bg-white h-10 w-10 rounded-full relative"
             >
-              <img src="#" />
+              <img src="/facebook.jpg" />
             </div>
 
             <div
-              style={{ left: "35%", top: "60%" }}
+              style={{ left: "33%", top: "57%" }}
               className="bg-white h-10 w-10 rounded-full relative"
-            ></div>
+            >
+              <img className="h-7 w-7" src="/instagram.png" />
+            </div>
           </div>
         </div>
       </div>

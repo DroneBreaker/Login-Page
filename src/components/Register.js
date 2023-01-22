@@ -64,15 +64,6 @@ const Register = ({ onFormSwitch }) => {
             Please Register
           </h2>
 
-          <div className="mx-10 md:mx-20">
-            <Button
-              bgColor={"white"}
-              img={"#"}
-              location="mail.google.com"
-              title={"Sign up with Google"}
-            />
-          </div>
-
           <hr className="mt-5 mx-10 md:mx-20" />
 
           <form
@@ -136,7 +127,9 @@ const Register = ({ onFormSwitch }) => {
         </div>
 
         <div className="bg-gradient-to-l from-blue-700 to-red-500">
-          <div className="h-64 w-64 rounded-full bg-gray-300 mx-6 md:mx-24 mt-6 mb-2 md:mt-24 animate-pulse"></div>
+          <div className="h-64 w-64 rounded-full bg-gray-300 mx-6 md:mx-24 mt-6 mb-2 md:mt-24 animate-pulse text-2xl">
+            <img className="h-full" src="/contact.png" />
+          </div>
         </div>
       </div>
     </div>
